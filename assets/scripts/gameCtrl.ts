@@ -52,6 +52,9 @@ export class GameCtrl extends Component {
 
   initListener() {
     input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+    this.node.on(Node.EventType.TOUCH_START, () => {
+      this.bird.fly();
+    });
   }
 
   // Testing method DELETE me in final version
@@ -65,6 +68,7 @@ export class GameCtrl extends Component {
         break;
       case KeyCode.KEY_Q:
         this.resetGame();
+        this.bird.resetBird();
     }
   }
 
