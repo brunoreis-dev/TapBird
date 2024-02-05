@@ -12,6 +12,7 @@ import {
 import { Ground } from "./ground";
 import { Results } from "./Results";
 import { Bird } from "./Bird";
+import { Pipes } from "./Pipes";
 const { ccclass, property } = _decorator;
 
 @ccclass("gameCtrl")
@@ -85,5 +86,9 @@ export class GameCtrl extends Component {
   resetGame() {
     this.result.resetScore();
     this.startGame();
+  }
+
+  passPipe() {
+    this.result.addScore();
   }
 }
