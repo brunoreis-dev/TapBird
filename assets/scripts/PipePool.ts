@@ -1,5 +1,4 @@
 import { _decorator, Component, instantiate, Node, NodePool, Prefab } from "cc";
-import { Pipes } from "./Pipes";
 const { ccclass, property } = _decorator;
 
 @ccclass("PipePool")
@@ -12,7 +11,7 @@ export class PipePool extends Component {
   @property({
     type: Node,
   })
-  public pipePoolHome = null;
+  public pipePoolHome;
 
   public pool = new NodePool();
 

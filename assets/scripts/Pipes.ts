@@ -37,7 +37,7 @@ export class Pipes extends Component {
   isPass: boolean;
 
   onLoad() {
-    this.game = find("GameCtrl").getComponent("GameCtrl");
+    this.game = find("GameCtrl").getComponent("gameCtrl");
     this.pipeSpeed = this.game.pipeSpeed;
     this.initPos();
     this.isPass = false;
